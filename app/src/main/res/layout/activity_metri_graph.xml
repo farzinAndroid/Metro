@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MetroGraphActivity">
+
+<!--    <com.ortiz.touchview.TouchImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/metroteh2" />-->
+
+    <com.impulsive.zoomimageview.ZoomImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/metroteh2"
+        app:rotation="false"
+        android:scaleType="matrix"
+        />
+
+
+
+
+</RelativeLayout>

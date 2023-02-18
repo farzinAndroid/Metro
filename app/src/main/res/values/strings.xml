@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">مترو تهران</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="schedule">زمانبندی حرکت مترو</string>
+    <string name="schedule_en">Schedule</string>
+    <string name="taxi_bus_line">خطوط اتوبوس و تاکسی</string>
+    <string name="public_Transportation">Public Transportation</string>
+    <string name="important_sights">مراکز مهم اطراف ایستگاه</string>
+    <string name="facilities_per">امکانات</string>
+    <string name="facilities">Facilities</string>
+    <string name="atm_per">دستگاه خودپرداز</string>
+    <string name="taxi_station_per">ایستگاه تاکسی</string>
+    <string name="telephone_per">تلفن همگانی</string>
+    <string name="lost_found_per">اشیاء گمشده</string>
+    <string name="lifter">آسانسور</string>
+    <string name="escalator_per">پله برقی</string>
+    <string name="ticket">بلیط</string>
+    <string name="bus_per">ایستگاه اتوبوس</string>
+    <string name="water_per">آب آشامیدنی</string>
+    <string name="parking_per">پارکینگ</string>
+    <string name="metro_map">نقشه مترو</string>
+</resources>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/low_black"
+    tools:context=".Activities.StationDetailsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/low_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/marginend_8"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:id="@+id/per_line_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_alignParentStart="true"
+                />
+
+            <com.farzin.metro.CustomView.BNazaninBoldTextView
+                android:id="@+id/en_line_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_below="@+id/per_line_title"
+                />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toStartOf="@+id/img_back"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/marginBottom_10dp"
+                android:text="خط"
+                />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:id="@+id/line_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toStartOf="@+id/line"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/marginBottom_10dp"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear_station"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_120dp"
+        android:orientation="vertical"
+        android:background="@color/blue"
+        android:gravity="center"
+        >
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/persian_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/marginBottom_10dp"
+            />
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/en_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/marginend_8"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingTop="@dimen/marginBottom_10dp"
+        android:paddingBottom="@dimen/marginBottom_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="خیابان ولی عصر"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginend_8"
+            android:layout_toRightOf="@+id/txt_address"
+            app:srcCompat="@drawable/location" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/taxi"
+                android:tint="@color/white"
+                />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/taxi_bus_line"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/public_Transportation"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/mall"
+                android:tint="@color/white"
+                />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/important_sights"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Nearby Places"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_directions_subway_24"
+                android:tint="@color/white"
+                />
+
+            <com.farzin.metro.CustomView.BHomaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/schedule"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/schedule_en"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/marginBottom_10dp"
+        android:paddingBottom="@dimen/marginBottom_10dp"
+        >
+
+        <com.farzin.metro.CustomView.BHomaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="@dimen/marginend_8"
+            android:text="@string/facilities_per"
+            android:textColor="@color/white" />
+
+        <com.farzin.metro.CustomView.BHomaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/marginend_8"
+            android:text="@string/facilities"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <View
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_atm"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/ic_baseline_atm_24" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_atm"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_atm"
+                    android:text="@string/atm_per"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_taxi"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/taxi" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_taxi"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_taxi"
+                    android:text="@string/taxi_station_per"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_telephone"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/ic_baseline_phone_24" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_telephone"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_telephone"
+                    android:text="@string/telephone_per" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_lost"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/lost" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_lost"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_lost"
+                    android:text="@string/lost_found_per"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_lifter"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/up_arrow" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_lifter"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_lifter"
+                    android:text="@string/lifter" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_escalator"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/up_arrow" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_escalator"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_escalator"
+                    android:text="@string/escalator_per"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_ticket"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/ic_baseline_wc_24" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_ticket"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_ticket"
+                    android:text="@string/ticket"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_bus_station"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/ic_baseline_directions_bus_24" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_bus"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_bus_station"
+                    android:text="@string/bus_per" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_water"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/water" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_water"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_water"
+                    android:text="@string/water_per" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_50">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_parking"
+                    style="@style/station_detail_image_style"
+                    app:srcCompat="@drawable/parkingg" />
+
+                <com.farzin.metro.CustomView.BHomaTextView
+                    android:id="@+id/txt_parking"
+                    style="@style/station_detail_text_style"
+                    android:layout_toStartOf="@+id/img_parking"
+                    android:text="@string/parking_per"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

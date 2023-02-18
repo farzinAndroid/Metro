@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parent_rel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_120dp"
+        android:background="@color/low_black">
+
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/persian_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textColor="@color/white" />
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/en_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/persian_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginBottom_10dp"
+            android:tint="@color/white"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/train_tracks" />
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/cross_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/cross"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/marginBottom_10dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

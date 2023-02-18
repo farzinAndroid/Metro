@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_120dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/marginend_8"
+            app:srcCompat="@drawable/ic_baseline_timeline_24" />
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/title_persian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img"
+            android:layout_marginEnd="@dimen/marginend_8"
+            android:layout_toStartOf="@+id/img"
+            android:textColor="@color/white" />
+
+        <com.farzin.metro.CustomView.BNazaninBoldTextView
+            android:id="@+id/title_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img"
+            android:layout_marginEnd="@dimen/marginend_8"
+            android:layout_marginBottom="@dimen/marginBottom_10dp"
+            android:layout_toStartOf="@+id/img"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>
